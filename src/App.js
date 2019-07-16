@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.scss";
+import "./scss/App.scss";
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
 
@@ -8,6 +8,7 @@ import Logo from "./components/DisplayComponents/Logo";
 import Numbers from "./components/ButtonComponents/NumberButtons/Numbers";
 import Specials from "./components/ButtonComponents/SpecialButtons/Specials";
 import Operators from "./components/ButtonComponents/OperatorButtons/Operators";
+import Display from "./components/DisplayComponents/Display";
 
 function App() {
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
@@ -21,9 +22,10 @@ function App() {
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
+        <Display></Display>
+        <Specials></Specials>
         <Numbers></Numbers>
         <Operators></Operators>
-        <Specials></Specials>
       </div>
     </div>
   );

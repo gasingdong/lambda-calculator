@@ -1,0 +1,12 @@
+@mixin flex($flow: row, $justify-content: center, $align-items: center) {
+    display: flex;
+    flex-flow: $flow;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin grid() {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
