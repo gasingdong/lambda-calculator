@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Display = props => {
+const Display = ({total}) => {
   return (
   <div className="Display">
     <div className="displayText">
-     {props.value | '0'}
+     {total}
     </div>
   </div>
   );
