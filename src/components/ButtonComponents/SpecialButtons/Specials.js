@@ -21,3 +21,5 @@ const Specials = () => {
     </div>
   );
 };
+
+export default Specials;
