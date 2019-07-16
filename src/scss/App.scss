@@ -18,6 +18,8 @@
 
     .App {
         @include grid();
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 75% 25%;
         width: 90%;
         margin: auto;
         margin-bottom: 40px;
