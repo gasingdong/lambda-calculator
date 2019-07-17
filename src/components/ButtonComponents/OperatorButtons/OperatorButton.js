@@ -1,8 +1,16 @@
 import React from "react";
 
+function parseValue(value) {
+  let newValue = parseFloat(value);
+  if(value.charAt(value.length - 1) === '%') {
+    newValue /= 100;
+  }
+  return newValue;
+}
+
 function calculate(operator, total, next) {
-  total = parseFloat(total);
-  next = parseFloat(next);
+  total = parseValue(total);
+  next = parseValue(next);
   switch (operator.operator.value) {
     case '+': total += next; break;
     case '-': total -= next; break;
@@ -10,7 +18,9 @@ function calculate(operator, total, next) {
     case '/': total /= next; break;
     default: break;
   }
-  return "" + total.toPrecision(12).replace(/.?0+$/,"");
+  console.log(total);
+  console.log(total.toPrecision)
+  return "" + total.toPrecision(12).replace(/\.?0+$/,"");
 }
 
 const OperatorButton = ({operator, state, setState}) => {

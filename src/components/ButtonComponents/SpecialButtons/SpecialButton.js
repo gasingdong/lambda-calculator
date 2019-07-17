@@ -16,7 +16,11 @@ function update(special, state) {
       }
     }
     case '%': {
-      break;
+      if (state.next !== '0') {
+        return {...state, next: state.next + "%"};
+      } else {
+        return {...state, total: state.total + "%"};
+      }
     }
     default: return;
   }
