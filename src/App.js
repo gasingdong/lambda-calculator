@@ -21,7 +21,6 @@ function App() {
     operator: {},
     next: '0',
   });
-  console.log(state);
   return (
     <div className="container">
       <Logo />

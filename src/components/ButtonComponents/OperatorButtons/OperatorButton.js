@@ -18,8 +18,6 @@ function calculate(operator, total, next) {
     case '/': total /= next; break;
     default: break;
   }
-  console.log(total);
-  console.log(total.toPrecision)
   return "" + total.toPrecision(12).replace(/\.?0+$/,"");
 }
 
