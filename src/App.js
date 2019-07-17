@@ -10,17 +10,6 @@ import Specials from "./components/ButtonComponents/SpecialButtons/Specials";
 import Operators from "./components/ButtonComponents/OperatorButtons/Operators";
 import Display from "./components/DisplayComponents/Display";
 
-function calculate(operator, number, total) {
-  if (operator === "+") {
-    total += number;
-  }
-  return total;
-}
-
-function doDisplay(operator, number, total) {
-
-}
-
 function App() {
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
   // Once the state hooks are in place write some functions to hold data in state and update that data depending on what it needs to be doing
@@ -39,7 +28,7 @@ function App() {
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
         <Display display={state.next === '0' ? state.total : state.next}></Display>
-        <Specials></Specials>
+        <Specials state={state} setState={setState}></Specials>
         <Numbers state={state} setState={setState}></Numbers>
         <Operators state={state} setState={setState}></Operators>
       </div>
