@@ -1,0 +1,13 @@
+.Display {
+    width: auto;
+    height: 100px;
+    font-size: 3.0rem;
+    background-color: $display-bg;
+    border-radius: 50px;
+    margin: 10px;
+    grid-column: 1 / span 2;
+    text-align: right;
+    color: $primary;
+    padding: 0 20px;
+    @include flex(row, flex-end, center);
+}
